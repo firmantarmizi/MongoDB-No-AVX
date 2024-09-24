@@ -22,8 +22,9 @@ RUN apt-get update && apt-get install -y \
     patch \
     && rm -rf /var/lib/apt/lists/*
 
-# Install scons
-RUN pip3 install scons
+# Install scons and other Python dependencies
+RUN pip3 install scons pymongo pymodm motor pymongocrypt dnspython \
+    typing-extensions packaging requests pyyaml requirements-parser
 
 # Clone MongoDB repository
 RUN git clone --branch r7.0.14 https://github.com/mongodb/mongo.git /mongo
