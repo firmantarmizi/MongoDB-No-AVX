@@ -1,16 +1,16 @@
-# MongoDB No AVX
+# MongoDB 4.4 for UniFi Controller
 
-This repository contains a Dockerfile for building MongoDB without AVX support. It's designed to be deployed using Easypanel on your server.
+This repository contains a Dockerfile for running MongoDB 4.4, specifically configured for use with UniFi Controller. It's designed to be deployed using Easypanel on your server.
 
 ## Contents
 
-- `Dockerfile`: Builds MongoDB 7.0.14 from source with a patch to disable AVX support.
+- `Dockerfile`: Sets up MongoDB 4.4 with configurations suitable for UniFi Controller.
 - `init-mongo.sh`: Initialization script for MongoDB.
 
 ## Features
 
-- MongoDB 7.0.14 built from source
-- AVX support disabled
+- MongoDB 4.4
+- Pre-configured for UniFi Controller
 - Initialization script included for first-time setup
 
 ## Deployment with Easypanel
@@ -37,7 +37,7 @@ Ensure that your UniFi Controller is configured to use this MongoDB instance. Yo
 
 ## Note
 
-This image is built without AVX support, which may affect performance but increases compatibility with older CPU architectures.
+This image uses MongoDB 4.4, which is known to be compatible with UniFi Controller. It does not require AVX support, making it suitable for a wide range of CPU architectures.
 
 ## License
 
